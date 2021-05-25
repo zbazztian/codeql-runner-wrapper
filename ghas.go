@@ -106,7 +106,7 @@ func analyze(
   commit_id string,            // the commit sha of the revision to analyze
   git_ref string,              // the git ref, e.g. "refs/heads/master"
   languages []string,          // an array of languages to analyze, can be empty, in which case the languages are guessed
-  build_commands string,       // the build command for the compiled languages. Will be executed in a unix shell. Can be multiple lines. Can be an empty string, in which case the build commands will be guessed
+  build_commands string,       // the build command for the compiled languages. Will be executed in a unix shell. Can be multiple lines long. Can be an empty string, in which case the build commands will be guessed.
   github_token string,         // a GitHub authentication token
 ) {
   _, err := os.Stat(runner_executable); if errors.Is(err, os.ErrNotExist) {
